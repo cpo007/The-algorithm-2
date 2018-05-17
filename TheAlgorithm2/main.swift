@@ -9,24 +9,38 @@
 import Foundation
 
 /*
- 575. Distribute Candies
+ 496. Next Greater Element I
 
- Given an integer array with even length, where different numbers in this array represent different kinds of candies. Each number means one candy of the corresponding kind. You need to distribute these candies equally in number to brother and sister. Return the maximum number of kinds of candies the sister could gain.
- Example 1:
- Input: candies = [1,1,2,2,3,3]
- Output: 3
- Explanation:
- There are three different kinds of candies (1, 2 and 3), and two candies for each kind.
- Optimal distribution: The sister has candies [1,2,3] and the brother has candies [1,2,3], too.
- The sister has three different kinds of candies.
- Example 2:
- Input: candies = [1,1,2,3]
- Output: 2
- Explanation: For example, the sister has candies [2,3] and the brother has candies [1,1].
- The sister has two different kinds of candies, the brother has only one kind of candies.
- Note:
+ You are given two arrays (without duplicates) nums1 and nums2 where nums1’s elements are subset of nums2. Find all the next greater numbers for nums1's elements in the corresponding places of nums2.
  
- The length of the given array is in range [2, 10,000], and will be even.
- The number in given array is in range [-100,000, 100,000].
+ The Next Greater Number of a number x in nums1 is the first greater number to its right in nums2. If it does not exist, output -1 for this number.
+ 
+ Example 1:
+ Input: nums1 = [4,1,2], nums2 = [1,3,4,2].
+ Output: [-1,3,-1]
+ Explanation:
+ For number 4 in the first array, you cannot find the next greater number for it in the second array, so output -1.
+ For number 1 in the first array, the next greater number for it in the second array is 3.
+ For number 2 in the first array, there is no next greater number for it in the second array, so output -1.
+ Example 2:
+ Input: nums1 = [2,4], nums2 = [1,2,3,4].
+ Output: [3,-1]
+ Explanation:
+ For number 2 in the first array, the next greater number for it in the second array is 3.
+ For number 4 in the first array, there is no next greater number for it in the second array, so output -1.
+ Note:
+ All elements in nums1 and nums2 are unique.
+ The length of both nums1 and nums2 would not exceed 1000.
  */
 
+
+func nextGreaterElement(_ findNums: [Int], _ nums: [Int]) -> [Int] {
+    
+    var intArr = [Int]()
+    for i in 0..<nums.count{
+       let n = findNums[i]
+    }
+    return intArr
+}
+
+print(nextGreaterElement([4,1,2],  [1,3,4,2]))
