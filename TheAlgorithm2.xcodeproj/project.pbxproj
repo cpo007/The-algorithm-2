@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38B685E520AD81A000F543F6 /* 18.5.17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B685E420AD81A000F543F6 /* 18.5.17.swift */; };
+		38B685E720AED2B800F543F6 /* 18.5.18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B685E620AED2B800F543F6 /* 18.5.18.swift */; };
 		38E0369320AA7A8600801A7C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0369220AA7A8600801A7C /* main.swift */; };
 		38E0369A20AAD9C500801A7C /* 18.5.15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0369920AAD9C500801A7C /* 18.5.15.swift */; };
 		38E0369C20AC27CC00801A7C /* 18.5.16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0369B20AC27CC00801A7C /* 18.5.16.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		38B685E420AD81A000F543F6 /* 18.5.17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 18.5.17.swift; sourceTree = "<group>"; };
+		38B685E620AED2B800F543F6 /* 18.5.18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 18.5.18.swift; sourceTree = "<group>"; };
 		38E0368F20AA7A8600801A7C /* TheAlgorithm2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheAlgorithm2; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E0369220AA7A8600801A7C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		38E0369920AAD9C500801A7C /* 18.5.15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 18.5.15.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				38E0369220AA7A8600801A7C /* main.swift */,
+				38B685E620AED2B800F543F6 /* 18.5.18.swift */,
 				38B685E420AD81A000F543F6 /* 18.5.17.swift */,
 				38E0369B20AC27CC00801A7C /* 18.5.16.swift */,
 				38E0369920AAD9C500801A7C /* 18.5.15.swift */,
@@ -129,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B685E720AED2B800F543F6 /* 18.5.18.swift in Sources */,
 				38E0369C20AC27CC00801A7C /* 18.5.16.swift in Sources */,
 				38E0369A20AAD9C500801A7C /* 18.5.15.swift in Sources */,
 				38B685E520AD81A000F543F6 /* 18.5.17.swift in Sources */,
