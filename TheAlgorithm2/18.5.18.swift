@@ -55,13 +55,6 @@ func test(root: TreeNode?, dict:inout [Int:(Int,Int)],level: Int) {
     return
 }
 
-let a = TreeNode.init(3)
-a.left = TreeNode.init(9)
-a.right = TreeNode.init(20)
-a.right?.left = TreeNode.init(15)
-a.right?.right = TreeNode.init(7)
-
-print(averageOfLevels(a))
 /*
  824. Goat Latin
  

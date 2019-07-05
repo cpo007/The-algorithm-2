@@ -38,3 +38,12 @@ import Foundation
  The binary representation of 10 is: 1010.
  */
 
+func hasAlternatingBits(_ n: Int) -> Bool {
+    
+    print(n>>1)
+    print((n^(n>>1)))
+    let tmp = (n^(n>>1))
+    return (tmp&(tmp+1))==0
+}
+
+print(hasAlternatingBits(5))
