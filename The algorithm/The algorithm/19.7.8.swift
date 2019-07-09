@@ -51,7 +51,6 @@ func defangIPaddr(_ address: String) -> String {
     return address
 }
 
-print(defangIPaddr("192.168.0.1"))
 
 
 /*
