@@ -111,41 +111,6 @@ func powI(x: Int, n: Int) -> Int {
     
 }
 
-//int pow(int x, int n) {
-//    if (n == 0) return 1;
-//    if (n == 1) return x % 1337;
-//    return pow(x % 1337, n / 2) * pow(x % 1337, n - n / 2) % 1337;
-//}
-
-//print(superPow(2, [1,0]))
-
-//func superPow(_ a: Int, _ b: [Int]) -> Int {
-//    let count = b.count
-//
-//    var res = 1
-//    var dp = Array(repeating: 0, count: count)
-//    dp[0] = a
-//    for i in 1..<count {
-//        dp[i] = powerMod(dp[i-1], 10)
-//    }
-//
-//    for i in 0..<count {
-//        res = (res * powerMod(dp[count-1-i], b[i])) % 1337
-//    }
-//
-//    return res
-//}
-//
-//func powerMod(_ a : Int, _ b :  Int) -> Int{
-//
-//    if b == 0 {
-//        return 1
-//    }
-//
-//    return (a * powerMod(a, b - 1)) % 1337
-// 10 * 10 * 9 * 10 * 8
-//
-//}
 
 /*
  50. Pow(x, n)
