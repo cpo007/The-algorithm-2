@@ -28,7 +28,30 @@ def preorder(self, root: 'Node'):
         return res
 
 
-def levelOrder(self, root: 'Node'):
+
+def isRobotBounded( instructions: str):
+        direction = 0
+        x = 0
+        y = 0
+        for i in instructions:
+            if i == 'L':
+                direction -= 1
+            elif i == 'R':
+                direction += 1
+            else:
+                direction%=4
+                print(direction)
+                if direction == 0:
+                    y += 1
+                elif direction == 1:
+                    x += 1
+                elif direction == 2:
+                    y -= 1
+                else:
+                    x -= 1
+        return direction % 4 != 0 or (x == 0 and y == 0)
 
 
-	
+
+
+print(isRobotBounded("GLRLLGLL"))
