@@ -148,22 +148,22 @@ func readBinaryWatch(_ num: Int) -> [String] {
  */
 
 
-func numberOfBoomerangs(_ points: [[Int]]) -> Int {
-    
-    var output = 0
-    var dic = [Int:Int]()
-    for i in 0..<points.count {
-        for j in 0..<points.count {
-            if points[i] == points[j] { continue }
-            let px = points[i][0] - (points[j][0])
-            let py = points[i][1] - (points[j][1])
-            let plength = px * px + py * py
-            dic.updateValue((dic[plength] ?? 0) + 1, forKey: plength)
-        }
-        for (_,v) in dic {
-            output+=(v * (v - 1))
-        }
-        dic.removeAll()
-    }
-    return output
-}
+//func numberOfBoomerangs(_ points: [[Int]]) -> Int {
+//    
+//    var output = 0
+//    var dic = [Int:Int]()
+//    for i in 0..<points.count {
+//        for j in 0..<points.count {
+//            if points[i] == points[j] { continue }
+//            let px = points[i][0] - (points[j][0])
+//            let py = points[i][1] - (points[j][1])
+//            let plength = px * px + py * py
+//            dic.updateValue((dic[plength] ?? 0) + 1, forKey: plength)
+//        }
+//        for (_,v) in dic {
+//            output+=(v * (v - 1))
+//        }
+//        dic.removeAll()
+//    }
+//    return output
+//}

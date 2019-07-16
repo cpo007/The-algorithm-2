@@ -9,189 +9,216 @@
 import Foundation
 
 
+
+
 /*
- 1041. 困于环中的机器人
+ 1046. 最后一块石头的重量
  
- 在无限的平面上，机器人最初位于 (0, 0) 处，面朝北方。机器人可以接受下列三条指令之一：
+ 有一堆石头，每块石头的重量都是正整数。
  
- "G"：直走 1 个单位
- "L"：左转 90 度
- "R"：右转 90 度
- 机器人按顺序执行指令 instructions，并一直重复它们。
+ 每一回合，从中选出两块最重的石头，然后将它们一起粉碎。假设石头的重量分别为 x 和 y，且 x <= y。那么粉碎的可能结果如下：
  
- 只有在平面中存在环使得机器人永远无法离开时，返回 true。否则，返回 false。
+ 如果 x == y，那么两块石头都会被完全粉碎；
+ 如果 x != y，那么重量为 x 的石头将会完全粉碎，而重量为 y 的石头新重量为 y-x。
+ 最后，最多只会剩下一块石头。返回此石头的重量。如果没有石头剩下，就返回 0。
+ 
+ */
+
+func lastStoneWeight(_ stones: [Int]) -> Int {
+    
+    var stones = stones
+    while stones.count >= 2 {
+        
+        stones.sort { (e1, e2) -> Bool in
+            return e1 < e2
+        }
+        let e1 = stones.last!
+        let e2 = stones[stones.count - 2]
+        stones.removeLast()
+        stones.removeLast()
+        let rw = abs(e1 - e2)
+        if rw > 0 {
+            stones.append(rw)
+        }
+    }
+    return stones.last ?? 0
+}
+
+/*
+ 447. 回旋镖的数量
+ 
+ 给定平面上 n 对不同的点，“回旋镖” 是由点表示的元组 (i, j, k) ，其中 i 和 j 之间的距离和 i 和 k 之间的距离相等（需要考虑元组的顺序）。
+ 
+ 找到所有回旋镖的数量。你可以假设 n 最大为 500，所有点的坐标在闭区间 [-10000, 10000] 中。
+ 
+ 示例:
+ 
+ 输入:
+ [[0,0],[1,0],[2,0]]
+ 
+ 输出:
+ 2
+ 
+ 解释:
+ 两个回旋镖为 [[1,0],[0,0],[2,0]] 和 [[1,0],[2,0],[0,0]]
+ 
+ */
+
+func dist(i: [Int],j: [Int]) -> Int {
+    return (i[0]-j[0])*(i[0]-j[0]) + (i[1]-j[1])*(i[1]-j[1])
+}
+
+func numberOfBoomerangs(_ points: [[Int]]) -> Int {
+    var count = 0
+    var map = [Int:Int]()
+    
+    for i in 0..<points.count{
+        
+        for j in 0..<points.count{
+            if i == j { continue }
+            let d = dist(i: points[i], j: points[j])
+            if (map[d] ?? 0) > 0 {
+                count += (map[d] ?? 0) * 2
+            }
+            map[d] = (map[d] ?? 0) + 1
+        }
+        map = [Int: Int]()
+    }
+    return count
+}
+
+/*
+ 884. 两句话中的不常见单词
+ 
+ 给定两个句子 A 和 B 。 （句子是一串由空格分隔的单词。每个单词仅由小写字母组成。）
+ 
+ 如果一个单词在其中一个句子中只出现一次，在另一个句子中却没有出现，那么这个单词就是不常见的。
+ 
+ 返回所有不常用单词的列表。
+ 
+ 您可以按任何顺序返回列表。
+ 
+   
  
  示例 1：
  
- 输入："GGLLGG"
- 输出：true
- 解释：
- 机器人从 (0,0) 移动到 (0,2)，转 180 度，然后回到 (0,0)。
- 重复这些指令，机器人将保持在以原点为中心，2 为半径的环中进行移动。
- 示例 2：
+ 输入：A = "this apple is sweet", B = "this apple is sour"
+ 输出：["sweet","sour"]
+ 示例 2：
  
- 输入："GG"
- 输出：false
- 解释：
- 机器人无限向北移动。
- 示例 3：
- 
- 输入："GL"
- 输出：true
- 解释：
- 机器人按 (0, 0) -> (0, 1) -> (-1, 1) -> (-1, 0) -> (0, 0) -> ... 进行移动。
+ 输入：A = "apple apple", B = "banana"
+ 输出：["banana"]
    
  
  提示：
  
- 1 <= instructions.length <= 100
- instructions[i] 在 {'G', 'L', 'R'} 中
-
+ 0 <= A.length <= 200
+ 0 <= B.length <= 200
+ A 和 B 都只包含空格和小写字母
+ 
+ 
  */
 
-func isRobotBounded(_ instructions: String) -> Bool {
+func uncommonFromSentences(_ A: String, _ B: String) -> [String] {
     
-    var direction = 0
-    var x = 0
-    var y = 0
+    let a = A.components(separatedBy: " ")
+    let b = B.components(separatedBy: " ")
     
-    for c in instructions {
-        
-        switch c {
-        case "L" :
-            direction-=1
-            break
-        case "R" :
-            direction+=1
-            break
-        case "G" :
-            direction = direction % 4
-            print(direction)
-            if direction == 0 {
-                y+=1
-            } else if direction == 1 {
-                x+=1
-            } else if direction == 2 {
-                y-=1
+    var map = [String: Int]()
+    
+    for s in a {
+        map[s] = (map[s] ?? 0) + 1
+    }
+    for s in b {
+        map[s] = (map[s] ?? 0) + 1
+    }
+    var output = [String]()
+    for (k,v) in map {
+        if v == 1 {
+            output.append(k)
+        }
+    }
+    
+    return output
+}
+
+
+/*
+ 5129. 表现良好的最长时间段
+ 
+ 给你一份工作时间表 hours，上面记录着某一位员工每天的工作小时数。
+ 
+ 我们认为当员工一天中的工作小时数大于 8 小时的时候，那么这一天就是「劳累的一天」。
+ 
+ 所谓「表现良好的时间段」，意味在这段时间内，「劳累的天数」是严格 大于「不劳累的天数」。
+ 
+ 请你返回「表现良好时间段」的最大长度。
+ 
+ 
+ 示例 1：
+ 
+ 输入：hours = [9,9,6,0,6,6,9]
+ 输出：3
+ 解释：最长的表现良好时间段是 [9,9,6]。
+ */
+
+func longestWPI(_ hours: [Int]) -> Int {
+    
+    var total = 0
+    
+    for i in (0..<hours.count).reversed(){
+        var goodOrNot = Array<Int>.init(repeating: 0, count: 2)
+        hours[i] > 8 ? (goodOrNot[0] = 1) : (goodOrNot[1] = 1)
+        if goodOrNot[0] > goodOrNot[1] {
+            total = max(total, goodOrNot[0] + goodOrNot[1])
+        }
+        for j in (0..<i).reversed(){
+            
+            let value = hours[j]
+            if value > 8 {
+                goodOrNot[0]+=1
             } else {
-                x-=1
+                goodOrNot[1]+=1
             }
-        default :
-            break
+            if goodOrNot[0] > goodOrNot[1] {
+                total = max(total, goodOrNot[0] + goodOrNot[1])
+            }
         }
     }
-//    print(x)
-//    print(y)
-    return (direction % 4 != 0) || (x == 0 && y == 0)
-}
-print(isRobotBounded("GLRLLGLL"))
-/*
- 553. 最优除法
- 
- 给定一组正整数，相邻的整数之间将会进行浮点除法操作。例如， [2,3,4] -> 2 / 3 / 4 。
- 
- 但是，你可以在任意位置添加任意数目的括号，来改变算数的优先级。你需要找出怎么添加括号，才能得到最大的结果，并且返回相应的字符串格式的表达式。你的表达式不应该含有冗余的括号。
- 
-
- 示例：
- 
- 输入: [1000,100,10,2]
- 输出: "1000/(100/10/2)"
- 解释:
- 1000/(100/10/2) = 1000/((100/10)/2) = 200
- 但是，以下加粗的括号 "1000/((100/10)/2)" 是冗余的，
- 因为他们并不影响操作的优先级，所以你需要返回 "1000/(100/10/2)"。
- 
- 其他用例:
- 1000/(100/10)/2 = 50
- 1000/(100/(10/2)) = 50
- 1000/100/10/2 = 0.5
- 1000/100/(10/2) = 2
- 说明:
- 
- 输入数组的长度在 [1, 10] 之间。
- 数组中每个元素的大小都在 [2, 1000] 之间。
- 每个测试用例只有一个最优除法解。
- 
- */
-
-
-//第一个是分子  后面的都是分母，分母尽可能小
-func optimalDivision(_ nums: [Int]) -> String {
-    if nums.count == 0 {
-        return ""
-    } else if nums.count == 1 {
-        return "\(nums[0])"
-    } else if nums.count == 2 {
-        return "\(nums[0])/\(nums[1])"
-    }
+    return total
     
-    var outputStr = "\(nums[0])" + "/("
-    for i in 1..<(nums.count - 1){
-        outputStr = outputStr + "\(nums[i])" + "/"
-    }
-    outputStr = outputStr + "\(nums[nums.count - 1])" + ")"
-    return outputStr
 }
 
-
-/*
- 848. 字母移位
- 
- 有一个由小写字母组成的字符串 S，和一个整数数组 shifts。
- 
- 我们将字母表中的下一个字母称为原字母的 移位（由于字母表是环绕的， 'z' 将会变成 'a'）。
- 
- 例如·，shift('a') = 'b'， shift('t') = 'u',， 以及 shift('z') = 'a'。
- 
- 对于每个 shifts[i] = x ， 我们会将 S 中的前 i+1 个字母移位 x 次。
- 
- 返回将所有这些移位都应用到 S 后最终得到的字符串。
- 
- 示例：
- 
- 输入：S = "abc", shifts = [3,5,9]
- 输出："rpl"
- 解释：
- 我们以 "abc" 开始。
- 将 S 中的第 1 个字母移位 3 次后，我们得到 "dbc"。
- 再将 S 中的前 2 个字母移位 5 次后，我们得到 "igc"。
- 最后将 S 中的这 3 个字母移位 9 次后，我们得到答案 "rpl"。
- 提示：
- 
- 1 <= S.length = shifts.length <= 20000
- 0 <= shifts[i] <= 10 ^ 9
- 
-
- */
-
-
-func shiftingLetters(_ S: String, _ shifts: [Int]) -> String {
+func logestWPI2(_ hours: [Int]) -> Int {
     
-    let cArr = S.map { (char) -> Character in
-        return char
+    var score = Array<Int>.init(repeating: 0, count: hours.count)
+    
+    for i in 0..<score.count{
+        score[i] = hours[i] > 8 ? 1 : -1
     }
-    
-    var arr = Array<Int>.init(repeating: 0, count: shifts.count)
-    
-    var addValue = 0
-    for (i,value) in shifts.enumerated().reversed(){
-        addValue+=value
-        arr[i] = addValue % 26
+    var presum = Array<Int>.init(repeating: 0, count: hours.count + 1)
+
+    for i in 1..<presum.count{
+        presum[i] = presum[i - 1] + score[i - 1]
     }
-    
-    var outputStr = ""
-    for (i,value) in arr.enumerated(){
-        if let asciiValue = cArr[i].unicodeScalars.first?.value {
-            var newValue = asciiValue + UInt32(value)
-            if newValue > 122 {
-                newValue = newValue - 26
-            }
-            outputStr.append(Character.init(UnicodeScalar(newValue)!))
+    var stack = [Int]()
+    for i in 0..<presum.count{
+        if stack.count == 0 || presum[stack.last ?? 0] > presum[i]{
+            stack.append(i)
         }
     }
-
-    
-    return outputStr
+    var ans = 0
+    var i = hours.count
+    while i > ans {
+        while stack.count > 0 && presum[stack.last ?? 0] < presum[i] {
+            ans = max(ans, i - (stack.last ?? 0))
+            stack.popLast()
+        }
+        i-=1
+    }
+    return ans
 }
+
+//print(longestWPI([6,6,9]))
+print(logestWPI2([9,9,6,0,6,6,9]))
 

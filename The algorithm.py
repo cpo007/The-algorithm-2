@@ -28,6 +28,20 @@ def preorder(self, root: 'Node'):
         return res
 
 
+def isR(instructions: str):
+	direction = 0
+	x = 0
+	y = 0
+	for i in instructions:
+		if i == "L":
+			direction -= 1
+		elif i == "R":
+			direction += 1
+		else:
+			print(direction)
+			direction = direction % 4
+			# print(direction)
+	pass
 
 def isRobotBounded( instructions: str):
         direction = 0
@@ -49,9 +63,13 @@ def isRobotBounded( instructions: str):
                     y -= 1
                 else:
                     x -= 1
+
         return direction % 4 != 0 or (x == 0 and y == 0)
 
 
+# isR("RLLGLRRRRGGRRRGLLRRR")
+# print(isRobotBounded("RLLGLRRRRGGRRRGLLRRR"))
 
-
-print(isRobotBounded("GLRLLGLL"))
+num = -5
+num %= 4
+print(num)
