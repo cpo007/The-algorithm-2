@@ -67,9 +67,52 @@ def isRobotBounded( instructions: str):
         return direction % 4 != 0 or (x == 0 and y == 0)
 
 
-# isR("RLLGLRRRRGGRRRGLLRRR")
-# print(isRobotBounded("RLLGLRRRRGGRRRGLLRRR"))
+def guess(num):
+	pick = 6
+	if num == pick:
+		return 0
+	elif num > pick:
+		return 1
+	else:
+		return -1
 
-num = -5
-num %= 4
-print(num)
+
+
+def guessNum(n):
+	arr = [1,n]
+
+	num = int((arr[0] + arr[1]) / 2)
+	status = guess(num)
+
+	while status != 0:
+		if status == 1 :
+			arr = [arr[0],num]
+		elif status == -1 :
+			arr = [num,arr[1]]
+		num = int((arr[0] + arr[1]) / 2)
+		status = guess(num)
+	print(num)
+
+guessNum(10)
+
+def firstBadVersion(n):
+	left = 1
+	right = n
+	isFirst = False
+
+	while isFirst == False:
+		version = int((left + right) / 2)
+		if isBadVersion(version):
+			if isBadVersion(version - 1):
+				right = version - 1
+			else:
+				isFirst = True
+				return version
+		else:
+			left = version + 1
+	return 0
+
+
+
+
+
