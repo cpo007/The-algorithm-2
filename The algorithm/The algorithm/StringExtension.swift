@@ -17,6 +17,8 @@ extension String {
         let endIndex = self.index(startIndex, offsetBy: 1)
         return String(self[startIndex..<endIndex])
     }
+    
+    
     /// String使用下标截取字符串
     /// string[index..<index] 例如："abcdefg"[3..<4] // d
     subscript (r: Range<Int>) -> String {

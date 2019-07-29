@@ -93,7 +93,6 @@ def guessNum(n):
 		status = guess(num)
 	print(num)
 
-guessNum(10)
 
 def firstBadVersion(n):
 	left = 1
@@ -112,7 +111,38 @@ def firstBadVersion(n):
 			left = version + 1
 	return 0
 
+class Employee:
+    def __init__(self, id, importance, subordinates):
+        # It's the unique id of each node.
+        # unique id of this employee
+        self.id = id
+        # the importance value of this employee
+        self.importance = importance
+        # the id of direct subordinates
+        self.subordinates = subordinates
+
+# output = 0
+
+def getImportance( employees, id):
+
+	hashmap = {}
+	for item in employees:
+		hashmap[item.id] = item
+
+	e = hashmap[id]
+	# output = 0
+	def getI(employe):
+		value=employe.importance
+		if len(employe.subordinates) != 0:
+			for ids in employe.subordinates:
+				value+=getI(hashmap[ids])
+		
+		return value
+	return getI(e)
 
 
+a = Employee(1,5,[2,3])
+b = Employee(2,3,[])
+c = Employee(3,3,[])
 
-
+print(getImportance([a,b,c],1))
