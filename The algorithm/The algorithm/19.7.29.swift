@@ -81,7 +81,6 @@ func findLHS(_ nums: [Int]) -> Int {
     return maxCount
 }
 
-print(findLHS([1,1,1,1]))
 
 /*
  784. 字母大小写全排列
