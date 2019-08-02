@@ -39,6 +39,7 @@
 		38AD8C9622E9FC80003B0F7D /* 19.7.25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AD8C9522E9FC80003B0F7D /* 19.7.25.swift */; };
 		38AD8C9822EF42CB003B0F7D /* 19.7.29.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AD8C9722EF42CB003B0F7D /* 19.7.29.swift */; };
 		38AD8C9A22F08DFF003B0F7D /* 19.7.30.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AD8C9922F08DFF003B0F7D /* 19.7.30.swift */; };
+		38AD8CC222F48A10003B0F7D /* 19.8.2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AD8CC122F48A10003B0F7D /* 19.8.2.swift */; };
 		38C3A94E1E4B0563006B2D2C /* 17.2.8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C3A94D1E4B0563006B2D2C /* 17.2.8.swift */; };
 		38C3A9501E4C563C006B2D2C /* 17.2.9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C3A94F1E4C563C006B2D2C /* 17.2.9.swift */; };
 		38C3A9521E4C80CD006B2D2C /* 17.2.9（2）.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C3A9511E4C80CD006B2D2C /* 17.2.9（2）.swift */; };
@@ -100,6 +101,7 @@
 		38AD8C9522E9FC80003B0F7D /* 19.7.25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.7.25.swift; sourceTree = "<group>"; };
 		38AD8C9722EF42CB003B0F7D /* 19.7.29.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.7.29.swift; sourceTree = "<group>"; };
 		38AD8C9922F08DFF003B0F7D /* 19.7.30.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.7.30.swift; sourceTree = "<group>"; };
+		38AD8CC122F48A10003B0F7D /* 19.8.2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.2.swift; sourceTree = "<group>"; };
 		38C3A94D1E4B0563006B2D2C /* 17.2.8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 17.2.8.swift; sourceTree = "<group>"; };
 		38C3A94F1E4C563C006B2D2C /* 17.2.9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 17.2.9.swift; sourceTree = "<group>"; };
 		38C3A9511E4C80CD006B2D2C /* 17.2.9（2）.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "17.2.9（2）.swift"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				3863AF6B1E03703C00AA435D /* main.swift */,
+				38AD8CC122F48A10003B0F7D /* 19.8.2.swift */,
 				38AD8C9922F08DFF003B0F7D /* 19.7.30.swift */,
 				38AD8C9722EF42CB003B0F7D /* 19.7.29.swift */,
 				38AD8C9522E9FC80003B0F7D /* 19.7.25.swift */,
@@ -264,6 +267,7 @@
 				3883E69E1E5C2E0E000FD7F2 /* 17.2.21(2).swift in Sources */,
 				3863210A1E0E54E6001BCEFF /* 16.12.23.swift in Sources */,
 				38D3F0A01E11449500815824 /* 16.12.26.swift in Sources */,
+				38AD8CC222F48A10003B0F7D /* 19.8.2.swift in Sources */,
 				38AD8C7622D63D4E003B0F7D /* 19.7.10.swift in Sources */,
 				38AD8C8622D8DD47003B0F7D /* 19.7.12.swift in Sources */,
 				381723EF1FCCE9CF0093D011 /* 17.11.28.swift in Sources */,
