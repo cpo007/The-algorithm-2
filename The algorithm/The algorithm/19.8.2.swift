@@ -76,7 +76,6 @@ func deckRevealedIncreasing(_ deck: [Int]) -> [Int] {
     return output.reversed()
 }
 
-print(deckRevealedIncreasing([17,13,11,2,3,5,7]))
 //[[17,13,11,2,3,5,7]]
 
 //[2,11,3,13,5,17,7]

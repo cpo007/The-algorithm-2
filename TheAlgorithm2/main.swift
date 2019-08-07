@@ -9,6 +9,35 @@
 import Foundation
 
 
+//Int数组是开始时间及结束时间转化为总分钟数 例如 12:00 = 720  的 count为2的二维数组
+func getTimeArray(arr: [[Int]]){
+    
+    var hashMap = [[Int]: [[Int]]]()
+    for tmp in arr{
+        
+        var isFlag = false
+        for (k,v) in hashMap {
+            if max(tmp[0], k[0]) <= min(tmp[1], k[1]) {
+                print("区间存在重叠")
+                let newK = [min(tmp[0], k[0]),max(tmp[1], k[1])]
+                var a = v
+                a.append(tmp)
+                hashMap.removeValue(forKey: k)
+                hashMap[newK] = a
+                isFlag = true
+            }
+        }
+        if !isFlag {
+            hashMap[tmp] = [tmp]
+        }
+    }
+    print(hashMap)
+}
+
+getTimeArray(arr: [[0,10],[0,9],[1,11],[20,40]])
+
+
+
 /*
  
  693. Binary Number with Alternating Bits
@@ -46,4 +75,4 @@ func hasAlternatingBits(_ n: Int) -> Bool {
     return (tmp&(tmp+1))==0
 }
 
-print(hasAlternatingBits(5))
+//print(hasAlternatingBits(5))

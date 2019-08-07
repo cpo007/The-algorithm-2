@@ -46,3 +46,11 @@ extension String {
         return self[from..<self.count]
     }
 }
+
+
+func printNodeVal(node: TreeNode?) {
+    guard let node = node else { return }
+    print(node.val)
+    printNodeVal(node: node.left)
+    printNodeVal(node: node.right)
+}
