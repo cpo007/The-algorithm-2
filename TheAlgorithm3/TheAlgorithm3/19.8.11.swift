@@ -40,7 +40,6 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     }
     return [Int]()
 }
-print(twoSum([3,2,4], 6))
 
 /*1155. 掷骰子的N种方法
  
