@@ -9,23 +9,40 @@
 import Foundation
 
 
-/*
- 4. 寻找两个有序数组的中位数
- 给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
- 
- 请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
- 
- 你可以假设 nums1 和 nums2 不会同时为空。
- 
- */
-
-func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
+class MinStack {
     
-    var startA = 0
-    var startB = 0
-    var a = nums1.count + nums2.count
+    var arr = [Int]()
+    var set = [Int]()
     
+    /** initialize your data structure here. */
+    init() {
+        
+    }
+    
+    func push(_ x: Int) {
+        arr.append(x)
+        set.append(x)
+    }
+    
+    func pop() {
+        let num = arr.removeLast()
+        set.remove(at: num)
+        print(set)
+    }
+    
+    func top() -> Int {
+        let num = arr.removeLast()
+        return num
+    }
+    
+    func getMin() -> Int {
+        return set.first!
+    }
     
 }
 
-
+//let stack = MinStack.init()
+//stack.push(-2)
+//stack.push(0)
+//stack.push(-3)
+//
