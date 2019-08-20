@@ -9,6 +9,8 @@
 import Foundation
 
 
+
+
 /*
  23. 合并K个排序链表
  
@@ -155,4 +157,3 @@ func generateParenthesis(_ n: Int) -> [String] {
     return arr
 }
 
-print(generateParenthesis(2))
