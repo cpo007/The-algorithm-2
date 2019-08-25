@@ -47,7 +47,6 @@ func divide(_ dividend: Int, _ divisor: Int) -> Int {
     return index
 }
 
-print(divide(-2147483648,1))
 
 /*
  25. K 个一组翻转链表

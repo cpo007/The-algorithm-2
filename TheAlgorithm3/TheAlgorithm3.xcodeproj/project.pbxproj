@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382CC9C32312AA43002EC41B /* 19.8.24.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382CC9C22312AA43002EC41B /* 19.8.24.swift */; };
 		385087EE22FEF4EB006C7964 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385087ED22FEF4EB006C7964 /* main.swift */; };
 		385087F522FF0E64006C7964 /* 19.8.10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385087F422FF0E64006C7964 /* 19.8.10.swift */; };
 		385087F722FFBEB1006C7964 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385087F622FFBEB1006C7964 /* StringExtension.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		382CC9C22312AA43002EC41B /* 19.8.24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.24.swift; sourceTree = "<group>"; };
 		385087EA22FEF4EB006C7964 /* TheAlgorithm3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheAlgorithm3; sourceTree = BUILT_PRODUCTS_DIR; };
 		385087ED22FEF4EB006C7964 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		385087F422FF0E64006C7964 /* 19.8.10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.10.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				385087ED22FEF4EB006C7964 /* main.swift */,
+				382CC9C22312AA43002EC41B /* 19.8.24.swift */,
 				38AFFF29230EDAFB0037F6DF /* 19.8.22.swift */,
 				38AFFF1A230C49940037F6DF /* 19.8.20.swift */,
 				38C3DF9A230AEF4000BC4DC8 /* 19.8.19.swift */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382CC9C32312AA43002EC41B /* 19.8.24.swift in Sources */,
 				38C3DF9B230AEF4000BC4DC8 /* 19.8.19.swift in Sources */,
 				387DF9E62301B15000402620 /* 19.8.12.swift in Sources */,
 				387DF9C82300F24000402620 /* 19.8.11.swift in Sources */,
