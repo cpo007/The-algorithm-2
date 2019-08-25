@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		382CC9C32312AA43002EC41B /* 19.8.24.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382CC9C22312AA43002EC41B /* 19.8.24.swift */; };
+		382CC9C52312CD81002EC41B /* 19.8.25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382CC9C42312CD81002EC41B /* 19.8.25.swift */; };
 		385087EE22FEF4EB006C7964 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385087ED22FEF4EB006C7964 /* main.swift */; };
 		385087F522FF0E64006C7964 /* 19.8.10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385087F422FF0E64006C7964 /* 19.8.10.swift */; };
 		385087F722FFBEB1006C7964 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385087F622FFBEB1006C7964 /* StringExtension.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		382CC9C22312AA43002EC41B /* 19.8.24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.24.swift; sourceTree = "<group>"; };
+		382CC9C42312CD81002EC41B /* 19.8.25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.25.swift; sourceTree = "<group>"; };
 		385087EA22FEF4EB006C7964 /* TheAlgorithm3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheAlgorithm3; sourceTree = BUILT_PRODUCTS_DIR; };
 		385087ED22FEF4EB006C7964 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		385087F422FF0E64006C7964 /* 19.8.10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.10.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				385087ED22FEF4EB006C7964 /* main.swift */,
+				382CC9C42312CD81002EC41B /* 19.8.25.swift */,
 				382CC9C22312AA43002EC41B /* 19.8.24.swift */,
 				38AFFF29230EDAFB0037F6DF /* 19.8.22.swift */,
 				38AFFF1A230C49940037F6DF /* 19.8.20.swift */,
@@ -168,6 +171,7 @@
 				38618AC72308548F00D75EB4 /* 19.8.17.swift in Sources */,
 				38AFFF2A230EDAFB0037F6DF /* 19.8.22.swift in Sources */,
 				387DF9FF230450F000402620 /* 19.8.14.swift in Sources */,
+				382CC9C52312CD81002EC41B /* 19.8.25.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
