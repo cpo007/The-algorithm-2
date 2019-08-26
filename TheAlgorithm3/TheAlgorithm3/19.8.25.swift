@@ -57,7 +57,6 @@ func countAndSay(_ n: Int) -> String {
     return tmp
 }
 
-print(countAndSay(6))
 
 
 /*
