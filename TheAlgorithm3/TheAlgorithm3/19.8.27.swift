@@ -86,7 +86,6 @@ func jump(_ nums: [Int]) -> Int {
     return deep
 }
 
-print(jump([2,9,6,5,7,0,7,2,7,9,3,2,2,5,7,8,1,6,6,6,3,5,2,2,6,3]))
 
 
 /*
