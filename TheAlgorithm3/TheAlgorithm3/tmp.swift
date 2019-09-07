@@ -67,7 +67,6 @@ func maxDistance(_ grid: [[Int]]) -> Int {
         arr.append(minOffset)
     }
     
-    print(arr)
     return arr.sorted().last ?? -1
 }
 
