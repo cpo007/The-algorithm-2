@@ -8,69 +8,38 @@
 
 import Foundation
 
-
-
 /*
- 1110. 删点成林
+ 1190. 反转每对括号间的子串
  
- 给出二叉树的根节点 root，树上每个节点都有一个不同的值。
+ 给出一个字符串 s（仅含有小写英文字母和括号）。
  
- 如果节点值在 to_delete 中出现，我们就把该节点从树上删去，最后得到一个森林（一些不相交的树构成的集合）。
+ 请你按照从括号内到外的顺序，逐层反转每对匹配括号中的字符串，并返回最终的结果。
  
- 返回森林中的每棵树。你可以按任意顺序组织答案。
+ 注意，您的结果中 不应 包含任何括号。
  
-   
+ 示例 1：
  
- 示例：
+ 输入：s = "(abcd)"
+ 输出："dcba"
+ 示例 2：
  
+ 输入：s = "(u(love)i)"
+ 输出："iloveu"
+ 示例 3：
  
+ 输入：s = "(ed(et(oc))el)"
+ 输出："leetcode"
+ 示例 4：
  
- 输入：root = [1,2,3,4,5,6,7], to_delete = [3,5]
- 输出：[[1,2,null,4],[6],[7]]
+ 输入：s = "a(bcdefghijkl(mno)p)q"
+ 输出："apmnolkjihgfedcbq"
  
+
  
  */
 
 
-func delNodes(_ root: TreeNode?, _ to_delete: [Int]) -> [TreeNode?] {
-    
-    var output = [TreeNode?]()
-    var tmpNode = root
+func reverseParentheses(_ s: String) -> String {
     
     
-    
-    func afterOrder(node: TreeNode?) {
-        guard let node = node else { return }
-       
-        afterOrder(node: node.left)
-        afterOrder(node: node.right)
-        if to_delete.contains(node.val) {
-            output.append(node.left)
-            output.append(node.right)
-            
-        }
-    }
-    afterOrder(node: root)
-    return output
-}
-
-let a = TreeNode.init(1)
-let b = TreeNode.init(2)
-let c = TreeNode.init(3)
-let d = TreeNode.init(4)
-let e = TreeNode.init(5)
-let f = TreeNode.init(6)
-let g = TreeNode.init(7)
-
-a.left = b
-a.right = c
-b.left = d
-b.right = e
-c.left = f
-c.right = g
-
-let nodes = delNodes(a, [3,5])
-
-for node in nodes {
-    print(node?.val)
 }
