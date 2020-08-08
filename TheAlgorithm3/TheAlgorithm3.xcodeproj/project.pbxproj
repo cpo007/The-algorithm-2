@@ -45,6 +45,7 @@
 		38CB4A3B232935250046BC79 /* 19.9.11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB4A3A232935250046BC79 /* 19.9.11.swift */; };
 		38D6DA672314236E001DCC73 /* 19.8.26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6DA662314236E001DCC73 /* 19.8.26.swift */; };
 		38FC89E124DD7CFA004F5431 /* 20.8.7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC89E024DD7CFA004F5431 /* 20.8.7.swift */; };
+		38FC89E624DEE7C1004F5431 /* 20.8.8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC89E524DEE7C1004F5431 /* 20.8.8.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +100,7 @@
 		38CB4A3A232935250046BC79 /* 19.9.11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.9.11.swift; sourceTree = "<group>"; };
 		38D6DA662314236E001DCC73 /* 19.8.26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.26.swift; sourceTree = "<group>"; };
 		38FC89E024DD7CFA004F5431 /* 20.8.7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 20.8.7.swift; sourceTree = "<group>"; };
+		38FC89E524DEE7C1004F5431 /* 20.8.8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 20.8.8.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				385087ED22FEF4EB006C7964 /* main.swift */,
+				38FC89E524DEE7C1004F5431 /* 20.8.8.swift */,
 				38FC89E024DD7CFA004F5431 /* 20.8.7.swift */,
 				383C728324768F78008774CF /* 20.5.21.swift */,
 				3885471B24753EDA00A10C97 /* 20.5.20.swift */,
@@ -235,6 +238,7 @@
 				38CB4A3B232935250046BC79 /* 19.9.11.swift in Sources */,
 				38C3DF9B230AEF4000BC4DC8 /* 19.8.19.swift in Sources */,
 				3898873D2322A851007A2A78 /* 19.9.6.swift in Sources */,
+				38FC89E624DEE7C1004F5431 /* 20.8.8.swift in Sources */,
 				387DF9E62301B15000402620 /* 19.8.12.swift in Sources */,
 				387DF9C82300F24000402620 /* 19.8.11.swift in Sources */,
 				3898873F2322A868007A2A78 /* tmp.swift in Sources */,
