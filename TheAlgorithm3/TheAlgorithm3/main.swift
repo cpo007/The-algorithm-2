@@ -8,19 +8,41 @@
 
 import Foundation
 
-func isBalanced(_ root: TreeNode?) -> Bool {
-    return height(node: root) >= 1
+
+func missingNumber(_ nums: [Int]) -> Int {
+    
+
+    var a = 0
+    var map = [Int: Int]()
+    for num in nums{
+        map[num] = 1
+    }
+    while map[a] != nil {
+        a+=1
+    }
+    return a
 }
 
-public func height(node: TreeNode?) -> Int {
-    guard let node = node else {
-        return 0
+
+
+func sortedListToBST(_ head: ListNode?) -> TreeNode? {
+    
+    var head = head
+    var arr = [Int]()
+    while head != nil {
+        arr.append(head!.val)
+        head = head?.next
     }
-    let leftHeight = height(node: node.left)
-    let rightHeight = height(node: node.right)
-    if leftHeight == -1 || rightHeight == -1 || abs(leftHeight - rightHeight) > 1 {
-        return -1
-    } else {
-        return max(leftHeight, rightHeight) + 1
+    
+    func buildBST(start: Int, end: Int) -> TreeNode? {
+        if start > end { return nil }
+        let mid = (start + end) / 2
+        let node = TreeNode.init(arr[mid])
+        node.left = buildBST(start: start, end: mid - 1)
+        node.right = buildBST(start: mid + 1, end: end)
+        return node
     }
+        
+    return buildBST(start: 0, end: arr.count - 1)
+    
 }
