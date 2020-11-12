@@ -34,6 +34,7 @@
 		387AFB4F255BC02800BC2CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387AFB4E255BC02800BC2CE0 /* Assets.xcassets */; };
 		387AFB52255BC02800BC2CE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387AFB50255BC02800BC2CE0 /* LaunchScreen.storyboard */; };
 		387AFB7C255BD40E00BC2CE0 /* 20.11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387AFB7B255BD40E00BC2CE0 /* 20.11.swift */; };
+		387AFBAC255D5A9E00BC2CE0 /* 20.11.12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387AFBAB255D5A9E00BC2CE0 /* 20.11.12.swift */; };
 		387DF9C82300F24000402620 /* 19.8.11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387DF9C72300F24000402620 /* 19.8.11.swift */; };
 		387DF9E62301B15000402620 /* 19.8.12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387DF9E52301B15000402620 /* 19.8.12.swift */; };
 		387DF9FF230450F000402620 /* 19.8.14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387DF9FE230450F000402620 /* 19.8.14.swift */; };
@@ -100,6 +101,7 @@
 		387AFB51255BC02800BC2CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		387AFB53255BC02800BC2CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387AFB7B255BD40E00BC2CE0 /* 20.11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 20.11.swift; sourceTree = "<group>"; };
+		387AFBAB255D5A9E00BC2CE0 /* 20.11.12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 20.11.12.swift; sourceTree = "<group>"; };
 		387DF9C72300F24000402620 /* 19.8.11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.11.swift; sourceTree = "<group>"; };
 		387DF9E52301B15000402620 /* 19.8.12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.12.swift; sourceTree = "<group>"; };
 		387DF9FE230450F000402620 /* 19.8.14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.8.14.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				385087ED22FEF4EB006C7964 /* main.swift */,
+				387AFBAB255D5A9E00BC2CE0 /* 20.11.12.swift */,
 				387AFB7B255BD40E00BC2CE0 /* 20.11.swift */,
 				38734C7224EC12EE00AA567A /* 20.8.17.swift */,
 				3863BB5B24E03A2F00879C7A /* 20.8.9.swift */,
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387AFBAC255D5A9E00BC2CE0 /* 20.11.12.swift in Sources */,
 				382CC9C32312AA43002EC41B /* 19.8.24.swift in Sources */,
 				3885471C24753EDA00A10C97 /* 20.5.20.swift in Sources */,
 				38CB4A3B232935250046BC79 /* 19.9.11.swift in Sources */,

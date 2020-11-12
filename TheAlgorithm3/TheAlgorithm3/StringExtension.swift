@@ -93,3 +93,20 @@ func quickPrint(node: TreeNode?) {
     quickPrint(node: node.right)
     
 }
+
+struct Stack<T> {
+    fileprivate var array = [T]()
+    
+    mutating func push(element: T) {
+        array.append(element)
+    }
+    
+    mutating func pop() -> T? {
+        return array.popLast()
+    }
+    
+    func peek() -> T? {
+        return array.last
+    }
+    
+}
